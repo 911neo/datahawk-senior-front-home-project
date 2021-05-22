@@ -29,7 +29,7 @@ export class RankViewerComponent implements OnInit {
   }
 
   onDatasetSelection(datasetId: DatasetId) {
-    this.store.dispatch(new AppActions.SelectDataset(DatasetId.BSR_FURNITURE));
+    this.store.dispatch(new AppActions.SelectDataset(datasetId));
   }
 
 }
