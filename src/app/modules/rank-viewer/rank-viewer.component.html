@@ -1,2 +1,10 @@
-<dh-rank-viewer-filters [datasetIds]="datasetIds" [selectedId]="(selectedDatasetId$ | async)" (datasetSelect)="onDatasetSelection($event)"></dh-rank-viewer-filters>
-<dh-rank-viewer-chart [chartOptions]="chartsOptions" [selectedDataset]="(selectedDataset$ | async)"></dh-rank-viewer-chart>
+<div class="fixed-header">
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>DataHawk</span>
+      </mat-toolbar><dh-rank-viewer-filters [datasetIds]="datasetIds" [selectedId]="(selectedDatasetId$ | async)" (datasetSelect)="onDatasetSelection($event)"></dh-rank-viewer-filters>
+</div>
+
+ <dh-rank-viewer-chart [chartOptions]="chartsOptions" [selectedDataset]="(selectedDataset$ | async)"></dh-rank-viewer-chart>

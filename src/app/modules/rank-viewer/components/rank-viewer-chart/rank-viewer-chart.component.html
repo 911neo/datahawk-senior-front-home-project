@@ -1,5 +1,53 @@
+<div class="container">
+    <label for="date">Select Date:</label>
+    <div class="input-group" daterangepicker [options]="picker1" (selected)="selectedDate($event, chosenDate)"
+      (applyDaterangepicker)="applyDatepicker($event)" (showDaterangepicker)="calendarEventsHandler($event)">
+      <span class="form-control uneditable-input" name="daterange">
+        {{ chosenDate.start | date:'mediumDate' }} - {{ chosenDate.end| date:'mediumDate' }}
+      </span>
+      <span class="input-group-btn">
+        <a type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></a>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="select-less-greater">
+    <mat-button-toggle-group #group="matButtonToggleGroup" appearance="legacy" aria-label="Font Style">
+      <mat-button-toggle value='less'>Lesser Than</mat-button-toggle>
+      <mat-button-toggle value='greater'>Greater Than</mat-button-toggle>
+      <!-- <mat-button-toggle value='equal'>Equal Too</mat-button-toggle> -->
+    </mat-button-toggle-group>
+</div>
+
+  <div class="filter-by-rank">
+    <mat-form-field [style.width.px]=100 appearance="outline">
+      <mat-label>By Rank</mat-label>
+      <input matInput type="text" [(ngModel)]="searchValueByRank">
+      <button mat-icon-button matSuffix *ngIf="searchValueByRank" matSuffix mat-icon-button aria-label="Clear" (click)="getProductByRank(searchValueByRank,group.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field  [style.width.px]=100 appearance="outline">
+      <mat-label>By Rating</mat-label>
+      <input matInput type="text" [(ngModel)]="searchValueByRating">
+      <button mat-icon-button matSuffix *ngIf="searchValueByRating" matSuffix mat-icon-button aria-label="Clear" (click)="getProductByRating(searchValueByRating,group.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field  [style.width.px]=100 appearance="outline">
+      <mat-label>By Price</mat-label>
+      <input matInput type="text" [(ngModel)]="searchValueByPrice">
+      <button mat-icon-button matSuffix *ngIf="searchValueByPrice" matSuffix mat-icon-button aria-label="Clear" (click)="getProductByPrice(searchValueByPrice,group.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+</div>
+
 <div class="chart">
-    <canvas baseChart
+    <canvas baseChart="base-chart"
             [datasets]="chartData"
             [labels]="chartLabels"
             [options]="chartOptions"

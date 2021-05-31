@@ -6,6 +6,9 @@ import { RankViewerFiltersComponent } from './components/rank-viewer-filters/ran
 import { RankViewerComponent } from './rank-viewer.component';
 import { ChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
+import { Daterangepicker } from 'ng2-daterangepicker';
+import { AppMaterialModule } from 'src/app/app.material.module';
+
 
 @NgModule({
     declarations: [
@@ -14,9 +17,11 @@ import { FormsModule } from '@angular/forms';
         RankViewerChartComponent,
     ],
     imports: [
+        AppMaterialModule,
         CommonModule,
         ChartsModule,
         FormsModule,
+        Daterangepicker,
         RankViewerRoutingModule
     ],
     providers: []

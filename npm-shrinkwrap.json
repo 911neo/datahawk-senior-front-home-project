@@ -143,6 +143,23 @@
         "tslib": "^2.1.0"
       }
     },
+    "@angular/cdk": {
+      "version": "12.0.1",
+      "resolved": "https://registry.npmjs.org/@angular/cdk/-/cdk-12.0.1.tgz",
+      "integrity": "sha512-fO77bM0LWZeHkg+o23ZYGaZbth5DbaGDHrHVq+ygPA+wjmSDs12w2vIXQ6KpruGdP+28tAdpvZDMfD56N7xTbg==",
+      "requires": {
+        "parse5": "^5.0.0",
+        "tslib": "^2.1.0"
+      },
+      "dependencies": {
+        "parse5": {
+          "version": "5.1.1",
+          "resolved": "https://registry.npmjs.org/parse5/-/parse5-5.1.1.tgz",
+          "integrity": "sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==",
+          "optional": true
+        }
+      }
+    },
     "@angular/cli": {
       "version": "12.0.0",
       "resolved": "https://registry.npmjs.org/@angular/cli/-/cli-12.0.0.tgz",
@@ -310,6 +327,14 @@
       "version": "12.0.0",
       "resolved": "https://registry.npmjs.org/@angular/forms/-/forms-12.0.0.tgz",
       "integrity": "sha512-/Z2AWd2k/9cs+WwXBlZ8yUqgGsHYcp8g6PUCehZQk1gd/4n4FOKvTIGiypajGUPwO4GOHJDzibfCsGw8MenCpQ==",
+      "requires": {
+        "tslib": "^2.1.0"
+      }
+    },
+    "@angular/material": {
+      "version": "12.0.1",
+      "resolved": "https://registry.npmjs.org/@angular/material/-/material-12.0.1.tgz",
+      "integrity": "sha512-Sevy/ssBuidSbpixUH8SvBXpHn+rKYfDao2YTgQxBJugIun9mnV0QqlzVG2gkdVYCesqEgZJRe3k7QXq7E+vlw==",
       "requires": {
         "tslib": "^2.1.0"
       }
@@ -1783,6 +1808,15 @@
       "integrity": "sha512-L3FKeEwMm8e8hqGvt7cSesVmGtavpRyHV1FNDq+Pm5pS4x5eFmE70ZERXCSBWAiLQqXBcZRUrwV59FZLQl/GxQ==",
       "dev": true
     },
+    "@types/jquery": {
+      "version": "3.5.5",
+      "resolved": "https://registry.npmjs.org/@types/jquery/-/jquery-3.5.5.tgz",
+      "integrity": "sha512-6RXU9Xzpc6vxNrS6FPPapN1SxSHgQ336WC6Jj/N8q30OiaBZ00l1GBgeP7usjVZPivSkGUfL1z/WW6TX989M+w==",
+      "dev": true,
+      "requires": {
+        "@types/sizzle": "*"
+      }
+    },
     "@types/json-schema": {
       "version": "7.0.7",
       "resolved": "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.7.tgz",
@@ -1816,6 +1850,12 @@
       "version": "4.0.0",
       "resolved": "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz",
       "integrity": "sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==",
+      "dev": true
+    },
+    "@types/sizzle": {
+      "version": "2.3.3",
+      "resolved": "https://registry.npmjs.org/@types/sizzle/-/sizzle-2.3.3.tgz",
+      "integrity": "sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==",
       "dev": true
     },
     "@types/source-list-map": {
@@ -3908,6 +3948,15 @@
       "dev": true,
       "requires": {
         "assert-plus": "^1.0.0"
+      }
+    },
+    "daterangepicker": {
+      "version": "3.1.0",
+      "resolved": "https://registry.npmjs.org/daterangepicker/-/daterangepicker-3.1.0.tgz",
+      "integrity": "sha512-DxWXvvPq4srWLCqFugqSV+6CBt/CvQ0dnpXhQ3gl0autcIDAruG1PuGG3gC7yPRNytAD1oU1AcUOzaYhOawhTw==",
+      "requires": {
+        "jquery": ">=1.10",
+        "moment": "^2.9.0"
       }
     },
     "debug": {
@@ -6562,6 +6611,11 @@
         }
       }
     },
+    "jquery": {
+      "version": "3.6.0",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz",
+      "integrity": "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+    },
     "js-tokens": {
       "version": "4.0.0",
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
@@ -7765,6 +7819,14 @@
           "integrity": "sha512-0RNDbSdEokBeEAkgNbxJ+BLwSManFy9TeXz8uW+48j/xhEXv1ePME60olyzw2XzUqUBNAYFeJadIqAgNqIACwg==",
           "dev": true
         }
+      }
+    },
+    "ng2-daterangepicker": {
+      "version": "3.0.1",
+      "resolved": "https://registry.npmjs.org/ng2-daterangepicker/-/ng2-daterangepicker-3.0.1.tgz",
+      "integrity": "sha512-1Vinv1mYbI5230UHOrYJjJrHgmCeo0Ryq1g/2iHaPS04BAUjnITl99gcY0V8M26+a/ii31FvderW7GR/h44qeA==",
+      "requires": {
+        "daterangepicker": "^3.0.5"
       }
     },
     "ngx-echarts": {

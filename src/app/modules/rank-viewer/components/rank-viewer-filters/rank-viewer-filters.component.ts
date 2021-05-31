@@ -10,7 +10,7 @@ import { DatasetId } from '../../../../models/dataset-id.enum';
 export class RankViewerFiltersComponent implements OnInit {
   @Input() selectedId: DatasetId | null = null;
   @Input() datasetIds: DatasetId[] | null = [];
-
+  @Input() customDateRange: object = {};
   @Output() datasetSelect: EventEmitter<DatasetId> = new EventEmitter<DatasetId>();
 
   constructor() { }

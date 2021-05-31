@@ -1,11 +1,10 @@
-<div class="filters">
-    <div class="dropdown">
-        <select class="dropdown-select" #selectList (change)="onDatasetClick(selectList.value)">
-            <option *ngFor="let id of datasetIds"
-                    [value]="id"
-                    [selected]="selectedId === id">
-                {{ id.toUpperCase() }}
-            </option>
-        </select>
-    </div>
+<div class="select">
+    <mat-form-field appearance="outline">
+        <mat-label>Select Furniture</mat-label>
+        <mat-select (selectionChange)="onDatasetClick(selectList.value)" disableRipple #selectList>
+          <mat-option *ngFor="let id of datasetIds" [value]="id">
+            {{ id.toUpperCase() }}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
 </div>

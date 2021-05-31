@@ -1,9 +1,14 @@
 import { ChartOptions } from 'chart.js';
 
 export const CHART_OPTIONS: ChartOptions = {
-    defaultColor: 'black',
     responsive: true,
     maintainAspectRatio: false,
+    title: {
+        text: 'Amazon Best Sellers',
+        display: true,
+        fontColor: "white"
+      },
+    
     scales: {
         xAxes: [
             {

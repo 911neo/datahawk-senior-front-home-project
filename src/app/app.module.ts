@@ -5,7 +5,10 @@ import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { AppState } from './state/app.state';
 import { environment } from '../environments/environment';
-import { ChartsModule } from 'ng2-charts';
+import { ChartsModule, ThemeService } from 'ng2-charts';
+import { Daterangepicker } from 'ng2-daterangepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -13,13 +16,15 @@ import { ChartsModule } from 'ng2-charts';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    Daterangepicker,
     AppRoutingModule,
     NgxsModule.forRoot([AppState], {
       developmentMode: !environment.production
     }),
-    ChartsModule
+    ChartsModule 
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
